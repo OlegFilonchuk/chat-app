@@ -1,9 +1,20 @@
 import React, { Component } from 'react'
+import RoomList from './components/RoomList'
 import MessageList from './components/MessageList'
+import NewMessageForm from './components/NewMessageForm'
+import NewRoomForm from './components/NewRoomForm'
+
 import Chatkit from '@pusher/chatkit'
 import { tokenUrl, instanceLocator } from './config.js'
 
 class App extends Component {
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      messages: []
+    }
+  }
 
   componentDidMount() {
     const chatManager = new Chatkit.ChatManager({
@@ -20,7 +31,9 @@ class App extends Component {
           roomId: 19373237,
           hooks: {
             onNewMessage: message => {
-              console.log('-----', 'message text:', message.text)
+              this.setState({
+                messages: [...this.state.messages, message]
+              })
             }
           }
         })
@@ -30,11 +43,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <MessageList>
-
-        </MessageList>
+        <RoomList />
+        <MessageList messages={this.state.messages}/>
+        <NewMessageForm/>
+        <NewRoomForm/>
       </div>
-    );
+    )
   }
 }
 
