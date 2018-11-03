@@ -3,7 +3,7 @@ import React, {Component} from 'react'
 class RoomList extends Component {
   render() {
     return (
-      <div>
+      <div className="room-list">
         Room List
       </div>
     )

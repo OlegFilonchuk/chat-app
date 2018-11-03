@@ -42,11 +42,11 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="app">
         <RoomList />
         <MessageList messages={this.state.messages}/>
-        <NewMessageForm/>
         <NewRoomForm/>
+        <NewMessageForm/>
       </div>
     )
   }
