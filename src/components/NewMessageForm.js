@@ -17,8 +17,7 @@ class NewMessageForm extends Component {
 
   handleSubmit = ev => {
     ev.preventDefault()
-    /*send message*/
-    console.log('---', this.state.value)
+    this.props.sendMessage(this.state.value)
     this.setState({
       value: ''
     })
