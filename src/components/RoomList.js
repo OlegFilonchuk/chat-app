@@ -4,7 +4,7 @@ class RoomList extends Component {
   render() {
     return (
       <div>
-        RoomList
+        Room List
       </div>
     )
   }
