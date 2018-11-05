@@ -30,6 +30,7 @@ class NewMessageForm extends Component {
         onSubmit={this.handleSubmit}
       >
         <input
+          disabled={this.props.disabled}
           value={this.state.value}
           onChange={this.handleChange}
           type="text"
