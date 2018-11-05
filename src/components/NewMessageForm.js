@@ -26,7 +26,7 @@ class NewMessageForm extends Component {
   render() {
     return (
       <form
-        className="new-message-form"
+        className="send-message-form"
         onSubmit={this.handleSubmit}
       >
         <input
