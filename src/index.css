@@ -29,7 +29,12 @@ html, body {
 }
 
 .message {
-  background: aqua;
+  margin: 10px;
+  padding: 5px 10px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  color: whitesmoke;
+  background: cadetblue;
 }
 
 .message-list {
@@ -53,5 +58,9 @@ html, body {
 .new-room-form {
 height: 100px;
 width: 20%;
-background: cornflowerblue;
+background: darkturquoise;
+}
+
+.room-active {
+  background: aliceblue;
 }
