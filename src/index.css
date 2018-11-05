@@ -35,13 +35,13 @@ html, body {
 .message-list {
   height: 500px;
   width: 61%;
-  background: cyan;
+  background: aquamarine;
 }
 
 .room-list {
   height: 500px;
   width: 20%;
-  background: aquamarine;
+  background: cyan;
 }
 
 .new-message-form {
