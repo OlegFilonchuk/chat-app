@@ -1,42 +1,39 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
-class UserForm extends Component {
-
-  constructor() {
-    super()
+class UsernameForm extends Component {
+  constructor(props) {
+    super(props)
     this.state = {
-      value: ''
+      username: '',
     }
   }
 
-  handleChange = ev => {
-    this.setState({
-      value: ev.currentTarget.value
-    })
+  onSubmit = e => {
+    e.preventDefault()
+    this.props.onSubmit(this.state.username)
   }
 
-  handleSubmit = ev => {
-    ev.preventDefault()
-    this.props.choseUser(this.state.value)
-    this.setState({
-      value: ''
-    })
+  onChange = e => {
+    this.setState({ username: e.target.value })
   }
 
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <input
-            type="text"
-            value={this.state.value}
-            onChange={this.handleChange}
-            placeholder='Who are you?..'
-          />
-        </form>
+        <div>
+          <h2>What is your username?</h2>
+            <form onSubmit={this.onSubmit}>
+              <input
+                type="text"
+                placeholder="Your full name"
+                onChange={this.onChange}
+              />
+              <input type="submit" />
+            </form>
+        </div>
       </div>
     )
   }
 }
 
-export default UserForm
+export default UsernameForm
