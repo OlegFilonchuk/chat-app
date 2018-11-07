@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@pusher/chatkit": "^0.7.18",
+    "@pusher/chatkit-server": "^1.0.2",
+    "express": "^4.16.4",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
-    "react-scripts": "2.1.1",
-    "@pusher/chatkit": "latest"
+    "react-scripts": "2.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
